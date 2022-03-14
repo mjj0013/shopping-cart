@@ -147,7 +147,7 @@ const Products = (props) => {
 
 
   let list = items.map((item, index) => {
-    let url = "https://picsum.photos/seed/" + imgSeeds[index] + "/50/50";
+    let url = "https://picsum.photos/seed/" + imgSeeds[index%4] + "/50/50";
     return (
       <li key={index}>
         <Image src={url} width={70} roundedCircle></Image>
